@@ -8,22 +8,22 @@ fun main () {
      */
 
     // type String
-//    val myName = "JW"
+    val myName = "JW"
     // type Int
-//    var myAge= 31
+    var myAge= 31
 
     // Integer TYPES: Byte (8-bit), Short (16-bit), Int (32-bit), Long (64-bit)
     // NOT NEEDED
-//    val myByte: Byte = 13
-//    val myShort: Short = 235
-//    val myint: Int = 123123123
-//    val myLong: Long = 39_812_823_236_232_932
+    val myByte: Byte = 13
+    val myShort: Short = 235
+    val myint: Int = 123123123
+    val myLong: Long = 39_812_823_236_232_932
 
-//    // type Float: Float (32 bit), Double (64 bit)
-//    val myFloat: Float = 13.37F
-//    val myDouble: Double = 3.14159265359
-//
-//    // Booleans
+    // type Float: Float (32 bit), Double (64 bit)
+    val myFloat: Float = 13.37F
+    val myDouble: Double = 3.14159265359
+
+  // Booleans
 //    var isSunny = true
 //    isSunny = false
 //
