@@ -1,5 +1,7 @@
 package com.jw.kotlinbasics
 
+import androidx.core.text.trimmedLength
+
 fun main () {
     // Immutable variable
     // TODO: Add new functionality
@@ -219,22 +221,77 @@ fun main () {
 //        // Skips 11 because 11/2 = 5.5 but truncates to whole no. because it is an integer
 //    }
 
-    var result = getAvg(5.3, 3.2932)
-    println(result)
+//    var result = getAvg(5.3, 3.2932)
+//    println(result)
+
+    // Nullables
+//    var name: String = "Denis"
+//    name = null -> compilation error
+//    var nullableName: String? = "Denis"
+//    nullableName = "Denis"
+
+//    println(nullableName?.toLowerCase())
+
+//    nullableName?.let {println(it.length)}
+
+    // Elvis operator "?:"
+//    val name = nullableName ?: "Guest"
+//    println(name)
+//
+//    println(nullableName !!.lowercase())
+//    if (nullablename != null) {
+//        var len2 = nullableName.length
+//    } else {
+//        null
+//    }
+    // Class and Objects
+    var denis = Person("Denis", "Panjuta")
+    var john = Person()
+//    var johnPeterson = Person(lastName = "Peterson")
+//    var phone = mobilePhone("Android", "Samsung", "Galaxy S23")
+    denis.hobby = "to skateboard"
+    denis.stateHobby()
+    john.hobby = "to play video games"
+    john.stateHobby()
+}
+
+class Person (firstName: String = "John", lastName: String = "Doe") {
+    // member variables - Properties
+    var age : Int? = null
+    var hobby: String = "Watch NetFlix"
+
+    init {
+        println("Initialised a new Person object with firstName = $firstName and lastName = $lastName")
+    }
+
+    // Member secondary constructor
+    constructor(firstName: String, lastName: String, age: Int)
+
+    // member functions - Methods
+    fun stateHobby () {
+        println("My hobby is $hobby")
+    }
 
 }
+
+//class MobilePhone (osName: String, brand: String, model: String) {
+//    init {
+//        println("Your $brand $model is running on $osName. ")
+//    }
+//}
+
 
 // Method - a Method is a Function within a class
 // Parameter
-fun addUp (a: Int, b: Int): Int{
-    return a + b
-}
-
-fun myFunction () {
-    print("Called from myFunction")
-}
-
-fun getAvg (a: Double, b: Double): Double {
-    var sum = a + b
-    return sum/2
-}
+//fun addUp (a: Int, b: Int): Int{
+//    return a + b
+//}
+//
+//fun myFunction () {
+//    print("Called from myFunction")
+//}
+//
+//fun getAvg (a: Double, b: Double): Double {
+//    var sum = a + b
+//    return sum/2
+//}
